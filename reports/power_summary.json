@@ -1,0 +1,6 @@
+{
+  "mde_80pct_absolute": 0.0024739929947320805,
+  "n_per_arm": 21306,
+  "baseline_from_observed_control": 0.005726086548390125,
+  "interpretation": "Future-planning sensitivity, not observed post-hoc power or a retrospective sample-size justification"
+}

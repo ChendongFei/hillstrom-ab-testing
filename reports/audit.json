@@ -1,0 +1,19 @@
+{
+  "rows": 64000,
+  "columns": 12,
+  "missing_values": 0,
+  "identical_rows_beyond_first_retained": 6562,
+  "verified_customer_duplicates": "unknown: no customer ID",
+  "sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece",
+  "counts": {
+    "No E-Mail": 21306,
+    "Mens E-Mail": 21307,
+    "Womens E-Mail": 21387
+  },
+  "srm_p_value": 0.9036929575604196,
+  "srm_expected": "1:1:1, based on original source; independent allocation assumed",
+  "rows_removed": 0,
+  "cleaning": [
+    "Surburban normalized to Suburban"
+  ]
+}
