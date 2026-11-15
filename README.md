@@ -1,5 +1,5 @@
 # Hillstrom Email Experiment
-### Measuring incremental conversion—not just campaign response
+### Measuring incremental conversion, not just campaign response
 
 A reproducible analysis of a **64,000-customer randomized email experiment**, built with Python and SQL. It covers experiment diagnostics (SRM, baseline balance), inference for the primary comparisons with multiplicity control, an exploratory revenue analysis, and the business recommendation that follows from the incremental effects.
 
@@ -58,7 +58,7 @@ The 1:1:1 SRM diagnostic gives p=0.903693. This is no evidence of a gross alloca
 ![EDA](reports/eda.png)
 
 ## Scope and limitations
-This is a retrospective reanalysis—not a newly run or prospectively registered experiment. The source reports randomized assignment, but assignment logs, customer IDs, deliverability, costs, margins, unsubscribes, longer-term retention and dates are unavailable. Causal interpretation is conditional on faithful randomization, complete outcome tracking, independent customer units, no interference and an accurate extract. It is not evidence about Canadian banking customers or current campaign performance.
+This is a retrospective reanalysis, not a newly run or prospectively registered experiment. The source reports randomized assignment, but assignment logs, customer IDs, deliverability, costs, margins, unsubscribes, longer-term retention and dates are unavailable. Causal interpretation is conditional on faithful randomization, complete outcome tracking, independent customer units, no interference and an accurate extract. It is not evidence about Canadian banking customers or current campaign performance.
 
 ## Sources
 - [Kaggle mirror](https://www.kaggle.com/datasets/bofulee/kevin-hillstrom-minethatdata-e-mailanalytics)

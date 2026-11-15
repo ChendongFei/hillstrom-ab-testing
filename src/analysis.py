@@ -217,7 +217,7 @@ def revenue_effects(d):
 def baseline_balance(d):
     """Standardized mean differences for pre-treatment covariates.
 
-    Descriptive only — 0.1 is a common rule-of-thumb flag, not a test.
+    Descriptive only: 0.1 is a common rule-of-thumb flag, not a test.
     """
     features = pd.concat(
         [

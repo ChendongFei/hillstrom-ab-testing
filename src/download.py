@@ -1,9 +1,9 @@
 """Download the dataset from its Kaggle mirror and verify its contents.
 
 The mirror serves a zip with a single CSV. The file is only written to
-data/hillstrom.csv if its SHA-256 matches the hash the analysis expects —
-if Kaggle or the dataset owner ever changes the file, this stops instead
-of letting different data into the analysis unnoticed.
+data/hillstrom.csv if its SHA-256 matches the hash the analysis expects.
+If the source file ever changes, this stops instead of letting
+different data into the analysis unnoticed.
 
 No Kaggle account or API key is needed for this public download.
 Run from the repository root:  python -m src.download
