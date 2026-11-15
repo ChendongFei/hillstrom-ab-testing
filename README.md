@@ -17,7 +17,7 @@ Both email assignments increased two-week purchase conversion relative to no ema
 | Mens email | +0.681 percentage points | [0.501, 0.864] pp | 3.05e-13 |
 | Womens email | +0.311 percentage points | [0.150, 0.474] pp | 0.000157 |
 
-Relative lifts are 118.8% and 54.3%; the absolute effects are more useful for planning: about **68 and 31 additional purchases per 10,000 assigned customers**, respectively, under comparable conditions. These are estimated experimental effects, not realized business improvements delivered by this portfolio.
+Relative lifts are 118.8% and 54.3%; the absolute effects are more useful for planning: about **68 and 31 additional purchases per 10,000 assigned customers**, respectively, under comparable conditions.
 
 ![Conversion treatment effects](reports/conversion_effects.png)
 

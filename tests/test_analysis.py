@@ -1,3 +1,9 @@
+"""Tests for the pieces of src/analysis.py that carry the results.
+
+The important ones pin the effect calculation against independent references:
+a hand-checkable example, Pearson's chi-square (which must agree with the
+two-proportion z-test), and Holm adjustment on known values.
+"""
 import numpy as np
 import pandas as pd
 import pytest
@@ -5,7 +11,8 @@ from scipy.stats import chi2_contingency
 from statsmodels.stats.multitest import multipletests
 from src.analysis import binary_effect, validate, bootstrap_difference
 
-def fixture():
+def make_frame():
+    """Smallest frame that passes validate(): one row per arm."""
     return pd.DataFrame(dict(recency=[1]*3,history_segment=['1) $0 - $100']*3,history=[10]*3,mens=[1]*3,womens=[0]*3,zip_code=['Urban']*3,newbie=[0]*3,channel=['Web']*3,segment=['No E-Mail','Mens E-Mail','Womens E-Mail'],visit=[0]*3,conversion=[0]*3,spend=[0]*3))
 
 def test_known_effect_and_symmetry():
@@ -26,15 +33,15 @@ def test_null_and_boundaries():
     with pytest.raises(ValueError): binary_effect(11,10,1,10)
 
 def test_missing_rejected():
-    d=fixture(); d.loc[0,'history']=np.nan
+    d=make_frame(); d.loc[0,'history']=np.nan
     with pytest.raises(ValueError): validate(d)
 
 def test_duplicates_retained():
-    d=pd.concat([fixture(),fixture()],ignore_index=True)
+    d=pd.concat([make_frame(),make_frame()],ignore_index=True)
     assert len(validate(d))==6
 
 def test_invalid_outcome_rejected():
-    d=fixture();d.loc[0,'conversion']=1
+    d=make_frame();d.loc[0,'conversion']=1
     with pytest.raises(ValueError): validate(d)
 
 def test_bootstrap_constant_and_deterministic():
