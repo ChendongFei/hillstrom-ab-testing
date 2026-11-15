@@ -1,7 +1,7 @@
 # Hillstrom Email Experiment
 ### Measuring incremental conversion—not just campaign response
 
-A reproducible analysis of a **64,000-customer randomized email experiment**, built with Python and SQL. This portfolio demonstrates experiment diagnostics, statistical inference, uncertainty communication, and a business decision grounded in incremental outcomes.
+A reproducible analysis of a **64,000-customer randomized email experiment**, built with Python and SQL. It covers experiment diagnostics (SRM, baseline balance), inference for the primary comparisons with multiplicity control, an exploratory revenue analysis, and the business recommendation that follows from the incremental effects.
 
 ## Decision brief
 Both email assignments increased two-week purchase conversion relative to no email in this historical sample. Consider a contemporary validation experiment before rollout. Do not equate higher conversion with proven profitability, or infer that one email beats the other from separate comparisons against control.
